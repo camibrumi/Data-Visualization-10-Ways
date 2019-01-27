@@ -87,10 +87,9 @@ I tried it, nice user interface but it does not work to actually see the data.
  - I won't use this program again in the future.
 https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
 
-5
+4 (if we say that we are done with the spss)
 
 Excel
-SPSS (from windows)
 
 nvd3
 
