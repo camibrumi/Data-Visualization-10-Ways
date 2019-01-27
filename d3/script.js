@@ -11,7 +11,7 @@ d3.csv('cars-sample.csv', function (data) {
     .domain([1300, 5300])
     .range([0,w])
   var yScale = d3.scale.linear()
-    .domain([7, 47])
+    .domain([7, 46])
     .range([h,0])
 	// SVG
 	var svg = body.append('svg')
@@ -32,16 +32,54 @@ d3.csv('cars-sample.csv', function (data) {
 	  .ticks(5)
 	  .orient('left')
   // Circles
+
   var circles = svg.selectAll('circle')
       .data(data)
       .enter()
     .append('circle')
-      .attr('cx',function (d) { return xScale(d.Weight) })
-      .attr('cy',function (d) { return yScale(d.MPG) })
-      .attr('r',function (d) { return xScale(d.Weight)/50 })
+      .attr('cx',function (d) {
+        if (d.MPG != 'NA') {
+          return xScale(d.Weight);
+        }
+      })
+      .attr('cy',function (d) {
+        if (d.MPG != 'NA') {
+          return yScale(d.MPG);
+        }
+       })
+      .attr('r',function (d) {
+        if (d.MPG != 'NA') {
+          var weight = d.Weight;
+          if (weight >= 4000) {
+            return 8;
+          } else if (weight >= 3000) {
+            return 5;
+          } else {
+            return 3;
+          }
+        }
+       })
       .attr('stroke','black')
       .attr('stroke-width',1)
-      .attr('fill',function (d,i) { return colorScale(i) })
+      .attr('fill',function (d) {
+        switch(d.Manufacturer) {
+          case 'bmw':
+            return d3.rgb(255, 0, 0);
+            break;
+          case 'ford':
+            return d3.rgb(255, 255, 0);
+            break;
+          case 'honda':
+            return d3.rgb(0, 255, 0);
+            break;
+          case 'mercedes':
+            return d3.rgb(0, 255, 255);
+            break;
+          case 'toyota':
+            return d3.rgb(255, 0, 255);
+            break;
+        }
+      })
       .style("opacity", 0.5)
       .on('mouseover', function () {
         d3.select(this)
@@ -54,7 +92,16 @@ d3.csv('cars-sample.csv', function (data) {
         d3.select(this)
           .transition()
           .duration(500)
-          .attr('r',function (d) { return xScale(d.Weight)/50 })
+          .attr('r',function (d) {
+            var weight = d.Weight;
+            if (weight >= 4000) {
+              return 8;
+            } else if (weight >= 3000) {
+              return 5;
+            } else {
+              return 3;
+            }
+          })
           .attr('stroke-width',1)
       })
     .append('title') // Tooltip

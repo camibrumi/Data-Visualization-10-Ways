@@ -23,3 +23,21 @@ http://bl.ocks.org/jfreels/6816504
 The library is pretty complex and seems impossible to understand at first how it works but taking an example from internet and starting modifying the parameters to see how it works is the way I learned a bit of d3.
 
 I learned how to use the transition() function. My scatterplot has an animation that when the mouse stops over a point, the point is magnified and a tag with details (manufacturer, weight and MPG) pops up.
+
+I found very d3 very flexible when it comes defining a function inside an attribute.
+
+I tried removing the 2 points that have MPG=NA using 
+.attr('cx',function (d) {
+        if (d.MPG != 'NA') {
+          return xScale(d.Weight);
+        }
+      })
+      .attr('cy',function (d) {
+        if (d.MPG != 'NA') {
+          return yScale(d.MPG);
+        }
+       })
+
+but this did not solve my problem because the points just moved to the top left of my representation (see screenshot)
+
+so I just did not remove them
