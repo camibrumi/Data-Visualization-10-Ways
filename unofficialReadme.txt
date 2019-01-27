@@ -11,3 +11,15 @@ I could do a complex scatterplot with only 4 lines of code!
 very easy to manipulate the data you want to represent!
 
 http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
+
+
+d3
+to run a local web server
+https://cs4460.wordpress.com/d3-setup/
+
+tutorial:
+http://bl.ocks.org/jfreels/6816504
+
+The library is pretty complex and seems impossible to understand at first how it works but taking an example from internet and starting modifying the parameters to see how it works is the way I learned a bit of d3.
+
+I learned how to use the transition() function. My scatterplot has an animation that when the mouse stops over a point, the point is magnified and a tag with details (manufacturer, weight and MPG) pops up.
