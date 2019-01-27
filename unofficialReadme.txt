@@ -77,8 +77,8 @@ Not so flexible when it comes to what points I want to add from the dataset, the
 
 
 for SPSS
-
-
+https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
+																																																																																																																																																																																																																																																																																																																																																																																																					
 5
 
 Excel
