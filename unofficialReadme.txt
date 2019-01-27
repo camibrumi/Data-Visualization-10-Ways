@@ -26,7 +26,7 @@ I learned how to use the transition() function. My scatterplot has an animation 
 
 I found very d3 very flexible when it comes defining a function inside an attribute.
 
-I tried removing the 2 points that have MPG=NA using 
+I tried removing the 2 points that have MPG=NA using
 .attr('cx',function (d) {
         if (d.MPG != 'NA') {
           return xScale(d.Weight);
@@ -78,9 +78,15 @@ DataWrapper
 I tried it, nice user interface but it does not work to actually see the data.
 
 
-for SPSS
+ SPSS
+ it is not flexible about parsing the csv dataset, or at least it is quite difficult for a newcomer to understand all the steps
+ in parsing correctly the data with this programs
+ - because of that I have more manufacturers, hence more colors on the scatterplot
+ - also I did some research and seems impossible to change the size of the circles
+ in function of the weight.
+ - I won't use this program again in the future.
 https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
-																																																																																																																																																																																																																																																																																																																																																																																																					
+
 5
 
 Excel
@@ -96,20 +102,3 @@ Tableau (The desktop version is for mac or windows brumar.cami@gmail.com, Holabo
 
 
 PowerBI
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
