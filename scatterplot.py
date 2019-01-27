@@ -7,6 +7,8 @@ y = []
 z = []
 size = []
 
+f, ax = plt.subplots(1)
+
 
 with open('cars-sample.csv','r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
@@ -42,11 +44,15 @@ with open('cars-sample.csv','r') as csvfile:
 
         i += 1
 
-plt.scatter(x,y, c=z, s=size, alpha=0.5)
+
+
+ax.scatter(x,y, c=z, s=size, alpha=0.5)
+ax.set_xlim(left=1600, right=5300)
+ax.set_ylim(bottom=7, top=47)
 plt.xlabel('Weight')
 plt.ylabel('MPG')
 #plt.legend()
-plt.show()
+plt.show(f)
 
 
 
