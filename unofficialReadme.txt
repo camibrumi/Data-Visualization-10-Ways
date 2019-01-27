@@ -40,4 +40,14 @@ I tried removing the 2 points that have MPG=NA using
 
 but this did not solve my problem because the points just moved to the top left of my representation (see screenshot)
 
-so I just did not remove them
+afterwards I also did the same thing with the radius, which solved my problem (see photo)
+if (d.MPG != 'NA') {
+          var weight = d.Weight;
+          if (weight >= 4000) {
+            return 8;
+          } else if (weight >= 3000) {
+            return 5;
+          } else {
+            return 3;
+          }
+        }
