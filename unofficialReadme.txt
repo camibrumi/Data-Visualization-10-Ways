@@ -7,3 +7,5 @@ I used the RStudio ide
 really easy to add a file, I did not have to do any for/while loops,
 I could do a complex scatterplot with only 4 lines of code!
 very easy to manipulate the data you want to represent!
+
+http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
