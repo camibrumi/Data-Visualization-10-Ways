@@ -56,3 +56,58 @@ if (d.MPG != 'NA') {
 Flourish
 it is not that flexible as using a library. for example, I can make the size of the circles to be in function of the weight, but I cannot actually scale the circles in order to have a more precise position in the plot.
 I also achieved to have a tag with more details of every point in the scatter plot
+
+I tried gnuplot but I couldn't step over this error
+
+gnuplot> plot 'cars-sample.csv' using 8:4 with points
+         warning: Skipping data file with no valid points
+                                                     ^
+         x range is invalid
+
+
+
+RawGraphs
+https://rawgraphs.io/
+Online
+Not so flexible when it comes to what points I want to add from the dataset, the tags (the scatterplot is really ugly with the tags activated).
+- the difference in size it is not that visible
+- I can only change the data that is represented on the X and Y-Axis, the color, size and label of the points, but nothing else
+- It is fast if I only need to visualize some dataset quickly
+
+
+
+for SPSS
+
+
+5
+
+Excel
+SPSS (from windows)
+
+nvd3
+
+Pixi.js
+Processing
+Processing.js
+Tableau (The desktop version is for mac or windows brumar.cami@gmail.com, Holabola1126) --
+
+
+
+PowerBI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
