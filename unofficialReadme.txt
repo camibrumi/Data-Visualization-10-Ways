@@ -1,0 +1,3 @@
+- a bit tricky when debugging the python programs (everything is a syntax error)
+- easy and fast to make the first version of the scatterplot
+- fast interpreter of the dataset
