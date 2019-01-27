@@ -55,3 +55,4 @@ if (d.MPG != 'NA') {
 
 Flourish
 it is not that flexible as using a library. for example, I can make the size of the circles to be in function of the weight, but I cannot actually scale the circles in order to have a more precise position in the plot.
+I also achieved to have a tag with more details of every point in the scatter plot
