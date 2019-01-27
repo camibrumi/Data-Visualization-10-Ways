@@ -74,6 +74,8 @@ Not so flexible when it comes to what points I want to add from the dataset, the
 - I can only change the data that is represented on the X and Y-Axis, the color, size and label of the points, but nothing else
 - It is fast if I only need to visualize some dataset quickly
 
+DataWrapper
+I tried it, nice user interface but it does not work to actually see the data.
 
 
 for SPSS
