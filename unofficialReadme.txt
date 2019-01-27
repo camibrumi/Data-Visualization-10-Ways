@@ -98,6 +98,9 @@ Processing
 Processing.js
 Tableau (The desktop version is for mac or windows brumar.cami@gmail.com, Holabola1126) --
 
+I tried with datapine also- failture
+https://secure.datapine.com/#onboarding/1
+
 
 
 PowerBI
