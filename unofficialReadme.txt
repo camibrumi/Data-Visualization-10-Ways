@@ -1,10 +1,11 @@
+1. matplotlib
 - a bit tricky when debugging the python programs (everything is a syntax error)
 - easy and fast to make the first version of the scatterplot
 - fast interpreter of the dataset
 - I did a hack in order to get the sizes of the points. I was checking when a weight on the table was >= 4000, then I added to the array of sizes the size 200, when it was between 3000 and 4000, then I would add a size of 100 for that point, and the same thing with the weights <= 3000.
 - I had to do many if-else cases in order to get the colors and the sizes of the points.
 
-R + ggplot
+2. R + ggplot
 I used the RStudio ide
 really easy to add a file, I did not have to do any for/while loops,
 I could do a complex scatterplot with only 4 lines of code!
@@ -13,7 +14,7 @@ very easy to manipulate the data you want to represent!
 http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
 
 
-d3
+3. d3
 to run a local web server
 https://cs4460.wordpress.com/d3-setup/
 
@@ -53,7 +54,7 @@ if (d.MPG != 'NA') {
         }
 
 
-Flourish
+4. Flourish
 it is not that flexible as using a library. for example, I can make the size of the circles to be in function of the weight, but I cannot actually scale the circles in order to have a more precise position in the plot.
 I also achieved to have a tag with more details of every point in the scatter plot
 
@@ -66,7 +67,7 @@ gnuplot> plot 'cars-sample.csv' using 8:4 with points
 
 
 
-RawGraphs
+5. RawGraphs
 https://rawgraphs.io/
 Online
 Not so flexible when it comes to what points I want to add from the dataset, the tags (the scatterplot is really ugly with the tags activated).
@@ -74,11 +75,11 @@ Not so flexible when it comes to what points I want to add from the dataset, the
 - I can only change the data that is represented on the X and Y-Axis, the color, size and label of the points, but nothing else
 - It is fast if I only need to visualize some dataset quickly
 
-DataWrapper
+BLAH: DataWrapper
 I tried it, nice user interface but it does not work to actually see the data.
 
 
- SPSS
+6. SPSS
  it is not flexible about parsing the csv dataset, or at least it is quite difficult for a newcomer to understand all the steps
  in parsing correctly the data with this programs
  - because of that I have more manufacturers, hence more colors on the scatterplot
@@ -87,7 +88,7 @@ I tried it, nice user interface but it does not work to actually see the data.
  - I won't use this program again in the future.
 https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
 
-4 (if we say that we are done with the spss)
+2 (if we say that we are done with the spss)
 
 Excel
 
@@ -96,7 +97,6 @@ nvd3
 Pixi.js
 Processing
 Processing.js
-Tableau (The desktop version is for mac or windows brumar.cami@gmail.com, Holabola1126) --
 
 I tried with datapine also- failture
 https://secure.datapine.com/#onboarding/1
@@ -104,3 +104,19 @@ https://secure.datapine.com/#onboarding/1
 
 
 PowerBI
+
+7. matlab
+after running the scripts that plots the scatterplot, it has an editor that makes it super easy to modify the chart, for example erase points
+
+8. plotly chart studio
+https://plot.ly/create/line-of-best-fit/#/
+really easy to use and nice interface
+It took me some time to figure out how to change the size of circles in function of the weight
+
+9. scatterplot.online
+https://scatterplot.online/
+one of the fastest online scatterplot creators after flourish. i only had an error once that the values of the y-axis were not represented,
+but just refreshing the web page, it worked perfectly again. I would recommend this tool.
+
+10. TIBCO Spotfire
+easy to use and user-friendly
