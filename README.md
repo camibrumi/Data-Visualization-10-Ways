@@ -153,3 +153,8 @@ It is quite easy to use after determining how to make it represent any data on t
 I have added a tag with details for every point.
 
 ![tableauTag](tableau/tableauTag.png)
+
+## The ones that I tried but didn't work for me:
+- gnuplot
+- DataWrapper
+- Excel (it literally took me less time to figure out how to use ggplot, matplotlib AND d3 together than learning how to make a scatterplot with only some of the required properties in Excel).
