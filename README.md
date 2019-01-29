@@ -1,140 +1,129 @@
+REMEMBER:
+- image: url "title"
+- not required Achievements
+
 # 02-DataVis-10ways
 
 Assignment 2 - Data Visualization, 10 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 10 times. 
+# Python + matplotlib
+It was a bit tricky when debugging the python program (I had lots of syntax errors). Also, in order to get the size of the points in function of the weight, I was checking when a weight on the table was >= 4000, then I added to the array of sizes the size 200, when it was between 3000 and 4000, then I would add a size of 100 for that point, and the same thing with the weights <= 3000. Hence, I hade a larger code only because of these if-else statements.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+On the positive side, it was easy and fast to make the first version of the scatterplot. It also had a fast interpreter/parser of the csv file.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+![matplotlib](matplotlib/matplotlib.png)
 
-Your goal is to use 10 different tools to make the following chart:
+# R + ggplot2
 
-![ggplot2](img/ggplot2.png)
+I used the RStudio IDE for this project. R is rally helpful when it comes to csv files: I literally just had to tel the program which file contained the data and that was all for the parsing part. Another thing was that I didn't have to write any for/while loop as I did when I used Matplotlib. Also I have to highlight the fact that doing this scatterplot it took me only 4 lines of code!
 
-These features should be preserved as much as possible in your replication:
+![ggplot2](img/ggplot2.png)  //TODO CHANGE THIS
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# JavaScript + HTML + CSS + d3
+
+Tutorial:
+http://bl.ocks.org/jfreels/6816504
+
+The library is pretty complex and seems impossible to understand at first how it works but taking an example from internet and starting modifying the parameters to see how it works is the way I learned a bit of d3.
+
+I found d3 very flexible when it comes to defining a function inside an attribute.
+
+I tried removing the 2 points that had MPG=NA using
+
+`.attr('cx',function (d) {
+        if (d.MPG != 'NA') {
+          return xScale(d.Weight);
+        }
+      })
+      .attr('cy',function (d) {
+        if (d.MPG != 'NA') {
+          return yScale(d.MPG);
+        }
+       })`
+
+but this did not solve my problem because where the points just moved to the top left of my representation:
+
+![d3WithIfs](d3/d3WithIfs.png)
+
+Afterwards, I did the same thing with the radius, which solved my problem:
+
+`if (d.MPG != 'NA') {
+          var weight = d.Weight;
+          if (weight >= 4000) {
+            return 8;
+          } else if (weight >= 3000) {
+            return 5;
+          } else {
+            return 3;
+          }
+        }`
+
+![withRadiusIf](d3/withRadiusIf.png)
+
+The advantatges of d3 are:
+- I did not have to do any for/while loops,
+- it is very easy to manipulate the data you want to represent because you only need to change the inner code of the attribute methods!
+- it is handy if you want to include personalized animations.
+
+I would totally recommend this library for data visualizations.
+
+## Technical & Design Achievements:
+
+I learned how to use the transition() function. My scatterplot has an animation that when the mouse stops over a point, the point is magnified and a tag with details (manufacturer, weight and MPG) pops up:
+
+![tagDetailsd3](d3/tagDetailsd3.png)
+
+# 4. Flourish
+It is not that flexible as using a library, but still it was fast to use and produce a scatterplots in less than an hour.
+
+## Technical Achievements:
+It took me some time to determine how to scale the size of the points after setting it in function of the weight (they were very big initially).
+
+![tagDetailsd3](d3/tagDetailsd3.png)
+
+## Design Achievements:
+I also I have the scatterplot showing a tag with detailed information of the point every time the mouse stops on it. I also made it to have the background grid.
+
+![flourishTag](flourish/flourishTag.png)
+
+# 5. RawGraphs
+Link to the online tool: https://rawgraphs.io/
+
+It is not so flexible when it comes to what points I want to add from the dataset, the tags (the scatterplot is really ugly with the tags activated):
+
+![flourishTag](flourish/flourishTag.png)
+
+- The difference in size it is not that visible and I cannot scale the sizes.
+- I can only change the data that is represented on the X and Y-Axis, the color, size and label of the points, but nothing else.
+- It is fast if I only need to visualize some dataset quickly.
+
+# 6. SPSS
+Tutorial: https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
+ It is not flexible when it comes to reading the csv dataset, or at least it is quite difficult for a begginer to understand all the steps
+ in parsing correctly the data with this programs. This lead to errors in the Manufacturer column. When I set the color to be in function of the Manufacturer, the program found more manufacturers than it should find, hence there are more colors in this scatterplot than manufacturers.
+
+![spssFail](spss/spssFail.png)
+
+I also did some research and seems impossible to change the size of the circles iso that it depends the weight.
+
+I won't use this program never ever again in the future.
+
+### Design Achievements
+I achieved to add the background grid.
+
+# 7. Matlab
+After running the scripts that plots the scatterplot, it has an editor that makes it super easy to modify the chart, for example erase points that satisfy MPG=NaN.
+
+![spssFail](spss/spssFail.png)
+
 
 Other features are not required. This includes:
 
 - The background grid.
 - The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
+Note that some software packages will make it **impossible** to perfectly preserve the above requirements.
 Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 10 different tools.
-Of the 10 tools, you must use at least 3 languages.
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 10.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- SPSS
-- d3 `<- since the rest of the class uses this, it's a good idea to use it`
-- nvd3
-- Matplotlib
-- Pixi.js
-- Processing
-- Processing.js
-- Tableau
-- Java 2d
-- GNUplot
-- Vega/Vega-lite
-- Flourish
-- PowerBI
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
