@@ -1,6 +1,5 @@
 
 # Assignment 2 - Data Visualization, 10 Ways  
-===
 
 ## Python + matplotlib
 It was a bit tricky when debugging the python program (I had lots of syntax errors). Also, in order to get the size of the points in function of the weight, I was checking when a weight on the table was >= 4000, then I added to the array of sizes the size 200, when it was between 3000 and 4000, then I would add a size of 100 for that point, and the same thing with the weights <= 3000. Hence, I hade a larger code only because of these if-else statements.
