@@ -12,7 +12,7 @@ It was a bit tricky when debugging the python program (I had lots of syntax erro
 
 On the positive side, it was easy and fast to make the first version of the scatterplot. It also had a fast interpreter/parser of the csv file.
 
-![matplotlib](matplotlib/matplotlib.png)
+![matplotlib1](matplotlib/matplotlib1.png)
 
 # R + ggplot2
 
