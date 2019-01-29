@@ -1,10 +1,5 @@
-REMEMBER:
-- image: url "title"
-- not required Achievements
 
-# 02-DataVis-10ways
-
-Assignment 2 - Data Visualization, 10 Ways  
+# Assignment 2 - Data Visualization, 10 Ways  
 ===
 
 # Python + matplotlib
@@ -18,7 +13,7 @@ On the positive side, it was easy and fast to make the first version of the scat
 
 I used the RStudio IDE for this project. R is rally helpful when it comes to csv files: I literally just had to tel the program which file contained the data and that was all for the parsing part. Another thing was that I didn't have to write any for/while loop as I did when I used Matplotlib. Also I have to highlight the fact that doing this scatterplot it took me only 4 lines of code!
 
-![ggplot2](img/ggplot2.png)  //TODO CHANGE THIS
+![ggplot2](img/ggplot2.png)
 
 # JavaScript + HTML + CSS + d3
 
