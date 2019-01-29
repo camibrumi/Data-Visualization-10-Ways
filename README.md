@@ -74,7 +74,7 @@ It is not that flexible as using a library, but still it was fast to use and pro
 ### Technical Achievements:
 It took me some time to determine how to scale the size of the points after setting it in function of the weight (they were very big initially).
 
-![tagDetailsd3](d3/tagDetailsd3.png)
+![flourish](flourish/flourish.png)
 
 ### Design Achievements:
 I also I have the scatterplot showing a tag with detailed information of the point every time the mouse stops on it. I also made it to have the background grid.
