@@ -2,20 +2,20 @@
 # Assignment 2 - Data Visualization, 10 Ways  
 ===
 
-# Python + matplotlib
+## Python + matplotlib
 It was a bit tricky when debugging the python program (I had lots of syntax errors). Also, in order to get the size of the points in function of the weight, I was checking when a weight on the table was >= 4000, then I added to the array of sizes the size 200, when it was between 3000 and 4000, then I would add a size of 100 for that point, and the same thing with the weights <= 3000. Hence, I hade a larger code only because of these if-else statements.
 
 On the positive side, it was easy and fast to make the first version of the scatterplot. It also had a fast interpreter/parser of the csv file.
 
 ![matplotlib1](matplotlib/matplotlib1.png)
 
-# R + ggplot2
+## R + ggplot2
 
 I used the RStudio IDE for this project. R is rally helpful when it comes to csv files: I literally just had to tel the program which file contained the data and that was all for the parsing part. Another thing was that I didn't have to write any for/while loop as I did when I used Matplotlib. Also I have to highlight the fact that doing this scatterplot it took me only 4 lines of code!
 
 ![ggplot2](img/ggplot2.png)
 
-# JavaScript + HTML + CSS + d3
+## JavaScript + HTML + CSS + d3
 
 Tutorial:
 http://bl.ocks.org/jfreels/6816504
@@ -63,26 +63,26 @@ The advantatges of d3 are:
 
 I would totally recommend this library for data visualizations.
 
-## Technical & Design Achievements:
+### Technical & Design Achievements:
 
 I learned how to use the transition() function. My scatterplot has an animation that when the mouse stops over a point, the point is magnified and a tag with details (manufacturer, weight and MPG) pops up:
 
 ![tagDetailsd3](d3/tagDetailsd3.png)
 
-# 4. Flourish
+## 4. Flourish
 It is not that flexible as using a library, but still it was fast to use and produce a scatterplots in less than an hour.
 
-## Technical Achievements:
+### Technical Achievements:
 It took me some time to determine how to scale the size of the points after setting it in function of the weight (they were very big initially).
 
 ![tagDetailsd3](d3/tagDetailsd3.png)
 
-## Design Achievements:
+### Design Achievements:
 I also I have the scatterplot showing a tag with detailed information of the point every time the mouse stops on it. I also made it to have the background grid.
 
 ![flourishTag](flourish/flourishTag.png)
 
-# 5. RawGraphs
+## 5. RawGraphs
 Link to the online tool: https://rawgraphs.io/
 
 It is not so flexible when it comes to what points I want to add from the dataset, the tags (the scatterplot is really ugly with the tags activated):
@@ -93,7 +93,7 @@ It is not so flexible when it comes to what points I want to add from the datase
 - I can only change the data that is represented on the X and Y-Axis, the color, size and label of the points, but nothing else.
 - It is fast if I only need to visualize some dataset quickly.
 
-# 6. SPSS
+## 6. SPSS
 Tutorial: https://statistics.laerd.com/spss-tutorials/scatterplot-using-spss-statistics.php
  It is not flexible when it comes to reading the csv dataset, or at least it is quite difficult for a begginer to understand all the steps
  in parsing correctly the data with this programs. This lead to errors in the Manufacturer column. When I set the color to be in function of the Manufacturer, the program found more manufacturers than it should find, hence there are more colors in this scatterplot than manufacturers.
@@ -107,49 +107,49 @@ I won't use this program never ever again in the future.
 ### Design Achievements
 I achieved to add the background grid.
 
-# 7. Matlab
+## 7. Matlab
 After running the scripts that plots the scatterplot, it has an editor that makes it super easy to modify the chart, for example erase points that satisfy MPG=NaN.
 
 ![matlabScatter](matlab/matlabScatter.png)
 
-## Design achievements:
+### Design achievements:
 I used a pastel color palette for this scatterplot.
 
-# 8. Plotly Chart Studio
+## 8. Plotly Chart Studio
 Online tool: https://plot.ly/create/line-of-best-fit/#/
 It is really easy to use and nice interface.
 
 ![plotly](plotly/plotly.png)
 
-# Technical Achievements
+### Technical Achievements
 It took me some time to figure out how to change the size of circles in function of the weight
 
-# 9. scatterplot.online
+## 9. scatterplot.online
 Online tool: https://scatterplot.online/
 One of the fastest online scatterplot creators after flourish. I only had an error once that the values of the y-axis were not represented, but just refreshing the web page, it worked perfectly again. I would recommend this tool.
 
 ![scatterplot.online](scatterplot.online/scatterplot.online)
 
-# Design Achievements
+### Design Achievements
 The colors are compatible. I also changed the color of the background.
 
-# Technical Achievements
+### Technical Achievements
 I did a workaround to get the transparency effect: turning the background black.
 
-# 10. TIBCO Spotfire
+## 10. TIBCO Spotfire
 Easy to use and user-friendly interface.
 
 ![spotfire](spotfire/spotfire)
 
-## Design Achievements
+### Design Achievements
 I have added the legends on a side of the representation.
 
-# Tableau
+## Tableau
 I is quite easy to use after determining how to make it represent any data on the screen.
 
 ![tableauScatter](tableau/tableauScatter)
 
-## Design Achievements
+### Design Achievements
 I have added a tag with details for every point.
 
 ![tableauTag](tableau/tableauTag)
