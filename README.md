@@ -138,7 +138,7 @@ I did a workaround to get the transparency effect: turning the background black.
 ## 10. TIBCO Spotfire
 Easy to use and user-friendly interface.
 
-![spotfire](spotfire/spotfire)
+![spotfire](spotfire/spotfire.png)
 
 ### Design Achievements
 I have added the legends on a side of the representation.
@@ -146,9 +146,9 @@ I have added the legends on a side of the representation.
 ## Tableau
 I is quite easy to use after determining how to make it represent any data on the screen.
 
-![tableauScatter](tableau/tableauScatter)
+![tableauScatter](tableau/tableauScatter.png)
 
 ### Design Achievements
 I have added a tag with details for every point.
 
-![tableauTag](tableau/tableauTag)
+![tableauTag](tableau/tableauTag.png)
