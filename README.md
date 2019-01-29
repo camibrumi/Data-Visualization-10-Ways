@@ -77,7 +77,7 @@ It took me some time to determine how to scale the size of the points after sett
 ![flourish](flourish/flourish.png)
 
 ### Design Achievements:
-I also I have the scatterplot showing a tag with detailed information of the point every time the mouse stops on it. I also made it to have the background grid.
+I also I have the scatterplot showing a tag with detailed information of the point every time the mouse stops on it. I also made it to have the background grid and legend.
 
 ![flourishTag](flourish/flourishTag.png)
 
@@ -127,7 +127,7 @@ It took me some time to figure out how to change the size of circles in function
 Online tool: https://scatterplot.online/
 One of the fastest online scatterplot creators after flourish. I only had an error once that the values of the y-axis were not represented, but just refreshing the web page, it worked perfectly again. I would recommend this tool.
 
-![scatterplot.online](scatterplot.online/scatterplot.online)
+![scatterplot.online](scatterplot.online/scatterplot.online.png)
 
 ### Design Achievements
 The colors are compatible. I also changed the color of the background.
