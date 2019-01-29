@@ -143,8 +143,9 @@ Easy to use and user-friendly interface.
 ### Design Achievements
 I have added the legends on a side of the representation.
 
-## Tableau
-I is quite easy to use after determining how to make it represent any data on the screen.
+## 11. Tableau
+Since the SPSS representation wasn't so successful, I decided try Tableau also.
+It is quite easy to use after determining how to make it represent any data on the screen.
 
 ![tableauScatter](tableau/tableauScatter.png)
 
